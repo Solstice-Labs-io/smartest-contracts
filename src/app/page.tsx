@@ -1,3 +1,7 @@
+"use client";
+
+import { TypeAnimation } from "react-type-animation";
+
 export default function Example() {
   return (
     <div className="bg-white h-screen">
@@ -19,8 +23,23 @@ export default function Example() {
         {/* <-----Top_Degradation-----> */}
         <div className="mx-auto max-w-2xl py-32 sm:py- lg:py-56">
           <div className="text-center">
+            <TypeAnimation
+              sequence={[
+                'The Easiest',
+                1000,
+                'The Fastest',
+                1000,
+                'The Smartest',
+                1000,
+                'The Best',
+                1000,
+              ]}
+              speed={{ type: "keyStrokeDelayInMs", value: 100 }}
+              className="font-bold text-gray-900 sm:text-5xl"
+              repeat={Infinity}
+            />
             <h1 className="font-bold text-gray-900 sm:text-5xl">
-              The Easiest Way of Building Smart Contracts
+              Way of Building Smart Contracts
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Generate, review, and deploy your smart contracts with a few
@@ -28,7 +47,7 @@ export default function Example() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/test"
+                href="/dashboard"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
